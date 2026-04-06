@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import TableView from "./TableView";
 
 function App() {
   let name: String = "Hardik";
@@ -24,6 +25,8 @@ function App() {
       <p>Age: {age.toString()}</p>
       <p>Phone: {phone.toString()}</p>
       <p>Theme: {isTheme ? 'Light' : 'Dark'}</p>
+        
+      <TableView/>
     </>
 }
 
