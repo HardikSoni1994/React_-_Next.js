@@ -19,14 +19,23 @@ function TableView () {
                 phone: 9852147890,
                 isActive: true
             },
+            {
+                name: "Jenish",
+                email: "jenish@gmail.com",
+                phone: 6587412015,
+                isActive: false
+            }
         ]
 
         setAllAdmin(data);
     }, []);
 
     return <>
-    <table border={1} >
-        <thead>
+    <div>
+        <h1>Admin List</h1>
+    </div>
+    <table border={1} className="table" >
+        <thead className="table-dark">
             <tr>
                 <th>SR. No.</th>
                 <th>Name</th>
@@ -39,15 +48,15 @@ function TableView () {
         <tbody>
             {
                 allAdmin.map((admin, index) => {
-                    return <tr>
+                    return <tr key={index}>
                                 <td>{index + 1}</td>
                                 <td>{admin.name}</td>
                                 <td>{admin.email}</td>
                                 <td>{admin.phone}</td>
                                 <td>{admin.isActive ? 'Active ✔' : 'inActive ✖'}</td>
                                 <td>
-                                    <button>Edit</button>
-                                    <button>Delete</button>
+                                    <button type="button" className="btn btn-warning">Edit</button>
+                                    <button type="button" className="btn btn-danger ms-3">Delete</button>
                                 </td>
                             </tr>
                 } )

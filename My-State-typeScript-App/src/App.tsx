@@ -20,13 +20,22 @@ function App() {
   phone = 8866299606;
 
   return <>
-      <h1>Hello typescript state app</h1>
-      <p>Name: {name}</p>
-      <p>Age: {age.toString()}</p>
-      <p>Phone: {phone.toString()}</p>
-      <p>Theme: {isTheme ? 'Light' : 'Dark'}</p>
+      <div className="container mt-3">
+        <div>
+          <h1>Hello typescript state app</h1>
+          <p>Name: {name}</p>
+          <p>Age: {age.toString()}</p>
+          <p>Phone: {phone.toString()}</p>
+          <p>Theme: {isTheme ? 'Light' : 'Dark'}</p>
+        </div>
+        <div className="card">
+          <div className="card-body">
+            This is some text within a card body.
+          </div>
+        </div>
         
       <TableView/>
+      </div>
     </>
 }
 
