@@ -15,6 +15,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Touch-friendly buttons for mobile */
+button, 
+a,
+[role="button"] {
+  touch-action: manipulation;
+  min-height: 44px;
+}
+
+/* Better tap highlights on mobile */
+@media (max-width: 768px) {
+  button:active,
+  a:active {
+    opacity: 0.7;
+    transition: opacity 0.1s ease;
+  }
+}
+
 /* Hardware Acceleration for Smooth Scrolling */
 section {
   transform: translateZ(0);
@@ -26,7 +43,6 @@ img {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
-
 
 /* Floating Animation for Food Icons */
 @keyframes float {
@@ -68,4 +84,16 @@ img {
 .animate-float-slow {
   animation: float-slow 6s ease-in-out infinite;
   animation-delay: 1s;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1, h2, h3 {
+    word-break: break-word;
+  }
 }
