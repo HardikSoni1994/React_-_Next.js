@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=500&color=7C3AED&center=true&vCenter=true&width=500&height=70&lines=Midnight+Fork;Restaurant+Website;React+%2B+Vite+%2B+Tailwind" alt="Typing SVG" />
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Responsive-FF6B6B?style=for-the-badge&logo=responsive&logoColor=white" />
+</div>
 
-Currently, two official plugins are available:
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<div align="center">
+  <img src="https://img.shields.io/badge/Status-Live%20%26%20Responsive-success?style=flat-square" />
+  <img src="https://img.shields.io/badge/Mobile%20First-Approved-brightgreen?style=flat-square" />
+  <img src="https://img.shields.io/badge/Cross%20Browser-Compatible-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/Performance-Optimized-blue?style=flat-square" />
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🍽️ **Midnight Fork - Restaurant Website**
 
-## Expanding the ESLint configuration
+A **fully responsive**, **mobile-first** restaurant website built with modern web technologies. Experience seamless browsing across all devices with smooth animations, interactive components, and an elegant design that captures the essence of fine dining.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📱 **Responsive Design Breakdown**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Device | Screen Size | Breakpoint | Status |
+|--------|-------------|------------|--------|
+| 📱 Small Mobile | 320px - 374px | `default` | ✅ Perfect |
+| 📱 Medium Mobile | 375px - 424px | `default` | ✅ Perfect |
+| 📱 Large Mobile | 425px - 639px | `default` | ✅ Perfect |
+| 📟 Tablet Portrait | 640px - 767px | `sm:` | ✅ Perfect |
+| 💻 Tablet Landscape | 768px - 1023px | `md:` | ✅ Perfect |
+| 🖥️ Desktop | 1024px - 1279px | `lg:` | ✅ Perfect |
+| 🖥️ Large Desktop | 1280px+ | `xl:` | ✅ Perfect |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎯 **Features**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🌟 Core Features
+- ✅ **Mobile-First Approach** - Built for smallest screens first
+- ✅ **Fully Responsive** - 320px to 4K displays
+- ✅ **Touch-Friendly** - 44px minimum touch targets
+- ✅ **Smooth Scroll** - Section-wise navigation
+- ✅ **Active Section Highlight** - Dynamic navbar updates
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🎨 UI/UX Features
+- ✅ **Glassmorphism Effects** - Modern translucent elements
+- ✅ **Gradient Lines** - Elegant section dividers
+- ✅ **Hover Animations** - Smooth transitions on desktop
+- ✅ **Swipe Gestures** - Mobile carousel navigation
+- ✅ **Loading States** - Optimized image loading
+
+### 📋 Components
+| Component | Description | Responsive Behavior |
+|-----------|-------------|---------------------|
+| Navbar | Fixed navigation with mobile menu | Hamburger menu on mobile |
+| Hero | Main banner with CTA | Text scales with screen |
+| FoodGallery | Horizontal scrolling gallery | Scroll on mobile, centered on desktop |
+| AboutUs | Company info with stats card | 2x2 grid stats on mobile |
+| Services | Service cards | 1→2→3 column grid |
+| Feedback | Customer testimonials | Swipe carousel |
+| OrderNow | Call to action banner | Stacked on mobile |
+| Team | Chef profiles | 1→2→4 column grid |
+| BookTable | Reservation form | 1 column on mobile |
+| FAQ | Questions carousel | 1→2→3 cards |
+| Footer | Links & social media | Stacked on mobile |
+
+---
+
+## 🛠️ **Tech Stack**
+
+### Frontend
+```json
+{
+  "framework": "React 19.2.4",
+  "bundler": "Vite 8.0.4",
+  "language": "TypeScript 6.0.2",
+  "styling": "TailwindCSS 4.2.2",
+  "icons": "SVG + Emoji"
+}
