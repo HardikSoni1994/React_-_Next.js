@@ -29,21 +29,22 @@ A **fully responsive**, **mobile-first** restaurant website built with modern we
 
 ## 📱 **Responsive Design Breakdown**
 
-| Device | Screen Size | Breakpoint | Status |
-|--------|-------------|------------|--------|
-| 📱 Small Mobile | 320px - 374px | `default` | ✅ Perfect |
-| 📱 Medium Mobile | 375px - 424px | `default` | ✅ Perfect |
-| 📱 Large Mobile | 425px - 639px | `default` | ✅ Perfect |
-| 📟 Tablet Portrait | 640px - 767px | `sm:` | ✅ Perfect |
-| 💻 Tablet Landscape | 768px - 1023px | `md:` | ✅ Perfect |
-| 🖥️ Desktop | 1024px - 1279px | `lg:` | ✅ Perfect |
-| 🖥️ Large Desktop | 1280px+ | `xl:` | ✅ Perfect |
+| Device              | Screen Size     | Breakpoint | Status     |
+| ------------------- | --------------- | ---------- | ---------- |
+| 📱 Small Mobile     | 320px - 374px   | `default`  | ✅ Perfect |
+| 📱 Medium Mobile    | 375px - 424px   | `default`  | ✅ Perfect |
+| 📱 Large Mobile     | 425px - 639px   | `default`  | ✅ Perfect |
+| 📟 Tablet Portrait  | 640px - 767px   | `sm:`      | ✅ Perfect |
+| 💻 Tablet Landscape | 768px - 1023px  | `md:`      | ✅ Perfect |
+| 🖥️ Desktop          | 1024px - 1279px | `lg:`      | ✅ Perfect |
+| 🖥️ Large Desktop    | 1280px+         | `xl:`      | ✅ Perfect |
 
 ---
 
 ## 🎯 **Features**
 
 ### 🌟 Core Features
+
 - ✅ **Mobile-First Approach** - Built for smallest screens first
 - ✅ **Fully Responsive** - 320px to 4K displays
 - ✅ **Touch-Friendly** - 44px minimum touch targets
@@ -51,6 +52,7 @@ A **fully responsive**, **mobile-first** restaurant website built with modern we
 - ✅ **Active Section Highlight** - Dynamic navbar updates
 
 ### 🎨 UI/UX Features
+
 - ✅ **Glassmorphism Effects** - Modern translucent elements
 - ✅ **Gradient Lines** - Elegant section dividers
 - ✅ **Hover Animations** - Smooth transitions on desktop
@@ -58,25 +60,27 @@ A **fully responsive**, **mobile-first** restaurant website built with modern we
 - ✅ **Loading States** - Optimized image loading
 
 ### 📋 Components
-| Component | Description | Responsive Behavior |
-|-----------|-------------|---------------------|
-| Navbar | Fixed navigation with mobile menu | Hamburger menu on mobile |
-| Hero | Main banner with CTA | Text scales with screen |
-| FoodGallery | Horizontal scrolling gallery | Scroll on mobile, centered on desktop |
-| AboutUs | Company info with stats card | 2x2 grid stats on mobile |
-| Services | Service cards | 1→2→3 column grid |
-| Feedback | Customer testimonials | Swipe carousel |
-| OrderNow | Call to action banner | Stacked on mobile |
-| Team | Chef profiles | 1→2→4 column grid |
-| BookTable | Reservation form | 1 column on mobile |
-| FAQ | Questions carousel | 1→2→3 cards |
-| Footer | Links & social media | Stacked on mobile |
+
+| Component   | Description                       | Responsive Behavior                   |
+| ----------- | --------------------------------- | ------------------------------------- |
+| Navbar      | Fixed navigation with mobile menu | Hamburger menu on mobile              |
+| Hero        | Main banner with CTA              | Text scales with screen               |
+| FoodGallery | Horizontal scrolling gallery      | Scroll on mobile, centered on desktop |
+| AboutUs     | Company info with stats card      | 2x2 grid stats on mobile              |
+| Services    | Service cards                     | 1→2→3 column grid                     |
+| Feedback    | Customer testimonials             | Swipe carousel                        |
+| OrderNow    | Call to action banner             | Stacked on mobile                     |
+| Team        | Chef profiles                     | 1→2→4 column grid                     |
+| BookTable   | Reservation form                  | 1 column on mobile                    |
+| FAQ         | Questions carousel                | 1→2→3 cards                           |
+| Footer      | Links & social media              | Stacked on mobile                     |
 
 ---
 
 ## 🛠️ **Tech Stack**
 
 ### Frontend
+
 ```json
 {
   "framework": "React 19.2.4",
@@ -85,3 +89,4 @@ A **fully responsive**, **mobile-first** restaurant website built with modern we
   "styling": "TailwindCSS 4.2.2",
   "icons": "SVG + Emoji"
 }
+```
