@@ -1,124 +1,139 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { productDataType } from "../utils/type";
-import { useRouter } from "next/navigation";
-import { toast } from "react-toastify";
+import { useParams, useRouter } from "next/navigation"; // useRouter aur useParams yahan se aayenge
+import { toast } from "react-toastify"; // Toastify import kiya
 
+export default function EditProduct() {
+  const router = useRouter();
+  const params = useParams(); // URL se data nikalne ke liye
+  const currentId = params.id; // URL mein jo id hogi wo mil jayegi
 
-export default function AddProduct() {
-  const productCategory = [ "Fashion", "Electronics", "Home", "Books", "Sports", "Beauty", "Automotive" ];
-  const productStockStatus = [ "In Stock", "Low Stock", "Out of Stock", "Pre-order", "Coming Soon"];
+  const productCategory = [
+    "Fashion",
+    "Electronics",
+    "Home",
+    "Books",
+    "Sports",
+    "Beauty",
+    "Automotive",
+  ];
+  const productStockStatus = [
+    "In Stock",
+    "Low Stock",
+    "Out of Stock",
+    "Pre-order",
+    "Coming Soon",
+  ];
 
-  
-
-  const [productData, setProductData] = useState<productDataType>({
-    productId: Math.floor(Math.random() * 10000),
+  const [productData, setProductData] = useState<any>({
+    productId: "",
     productName: "",
     productPrice: 0,
     productStockStatus: "",
     productDescription: "",
     productImage: "",
-    productCategory: ""
+    productCategory: "",
   });
-
-  const router = useRouter();
 
   const [errorForm, setErrorForm] = useState<any>({});
 
-  const [allProductData, setAllProductData] = useState<productDataType[]>([]);
+  const [allProductData, setAllProductData] = useState<any[]>([]);
 
-useEffect(() => {
-    const storedProducts = localStorage.getItem('products');
+  // 1. Data load karna aur ID ke hisaab se purana data form mein dikhana
+  useEffect(() => {
+    const storedProducts = localStorage.getItem("products");
     if (storedProducts && storedProducts !== "undefined") {
-      try {
-        const parsedProducts = JSON.parse(storedProducts);
-        setAllProductData(parsedProducts);
-      } catch (error) {
-        console.error("Local Storage data parse karne mein error:", error);
-        localStorage.removeItem('products');
+      const parsedProducts = JSON.parse(storedProducts);
+      setAllProductData(parsedProducts);
+
+      // useParams se mili ID se product dhoondho
+      if (currentId) {
+        const productToEdit = parsedProducts.find(
+          (p: any) => p.productId.toString() === currentId,
+        );
+        if (productToEdit) {
+          setProductData(productToEdit);
+        } else {
+          toast.error("Product nahi mila!");
+          router.push("/viewProduct"); // Agar product na mile toh wapas bhej do
+        }
       }
     }
-  }, []);
+  }, [currentId, router]);
 
-  useEffect(() => {
-  if (allProductData.length > 0) {
-    localStorage.setItem("products", JSON.stringify(allProductData));
-  }
-}, [allProductData]);
+  const onHandleChange = (event: any) => {
+    const { name, value } = event.target;
+    setProductData((prev: any) => ({
+      ...prev,
+      [name]: name === "productPrice" ? Number(value) : value,
+    }));
+  };
 
-const onSubmit = (event: any) => {
-    event.preventDefault(); // Sir ka exact logic
+  // 2. Form Submit (Update Logic)
+  const onSubmit = (event: any) => {
+    event.preventDefault(); // Sir ka tareeqa
 
+    // validation
     if (!validation()) {
       toast.error("Please fill all required fields correctly!");
       return;
     }
 
-    // Naya data array mein add karo
-    const updatedProducts = [...allProductData, productData];
+    // Map method se purane data ko naye data se replace karo
+    const updatedProducts = allProductData.map((p) =>
+      p.productId.toString() === currentId ? productData : p,
+    );
 
-    // Local Storage aur State mein save karo
     localStorage.setItem("products", JSON.stringify(updatedProducts));
-    setAllProductData(updatedProducts);
 
-    // Success Popup
-    toast.success("Product Added Successfully! 🎉");
+    // Toastify Success Message
+    toast.success("Product Updated Successfully! 🚀");
 
-    // Page Redirect
-    router.push('/viewProduct');
-  }
-
-  const onHandleChange = (event: any) => {
-
-    console.log(event.target.value);
-    console.log(event.target.name);
-
-    const {name, value} = event.target;
-    setProductData(productData => ({...productData, [name]: (name === 'productPrice') ? Number(value) : value}));
-  }
+    // useRouter se redirect karo
+    router.push("/viewProduct");
+  };
 
   const validation = () => {
     const error: any = {};
 
-    if(!productData.productName.trim()) {
+    if (!productData.productName.trim()) {
       error.productName = "Product Name is Required..";
     }
 
-    if(!productData.productPrice) {
+    if (!productData.productPrice) {
       error.productPrice = "Product Price is Required..";
-    }else if (productData.productPrice <= 0) {
-      error.productPrice = "Invalid Product Price"
+    } else if (productData.productPrice <= 0) {
+      error.productPrice = "Invalid Product Price";
     }
-    if(!productData.productStockStatus.trim()) {
+    if (!productData.productStockStatus.trim()) {
       error.productStockStatus = "Product Stock Status is Required..";
     }
-    if(!productData.productDescription.trim()) {
+    if (!productData.productDescription.trim()) {
       error.productDescription = "Product Description is Required..";
     }
-    if(!productData.productImage) {
+    if (!productData.productImage) {
       error.productImage = "Product Image is Required..";
     }
 
-    if(!productData.productCategory.trim()) {
+    if (!productData.productCategory.trim()) {
       error.productCategory = "Product Category is Required..";
     }
 
     setErrorForm(error);
 
     return Object.keys(error).length === 0;
-  }
+  };
 
   return (
-    <>
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
+   <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
           <div className="mb-8">
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-                  Add New Product
+                  Edit Product
                 </h1>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                   Fill out the form below to add a new product to your catalog
@@ -284,7 +299,7 @@ const onSubmit = (event: any) => {
                   {/* Submit Button */}
                   <div className="pt-4">
                    <button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md" >
-                    Add Product
+                    Update Product
                   </button>
                     
                   </div>
@@ -388,6 +403,5 @@ const onSubmit = (event: any) => {
           </div>
         </div>
       </div>
-    </>
   );
 }
