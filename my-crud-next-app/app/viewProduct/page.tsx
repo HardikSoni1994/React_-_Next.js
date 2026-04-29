@@ -313,7 +313,7 @@ export default function ViewProduct() {
                     >
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="text-sm font-semibold text-indigo-600">
-                          #{product.productId}
+                          {index + 1}
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
