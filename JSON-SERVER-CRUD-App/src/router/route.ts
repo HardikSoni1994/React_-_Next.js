@@ -1,9 +1,11 @@
 import { createBrowserRouter } from "react-router";
 import App from "../App";
 import Homepage from "../page/HomePage";
-import AboutPage from "../page/AboutPage";
-import ContactPage from "../page/ContactPage";
+import AddCarPage from "../page/AddCarPage";
+import ViewCarPage from "../page/ViewCarPage";
+import EditCarPage from "../page/EditCarPage";
 import NotFoundPage from "../page/NotFoundPage";
+import CarDetailsPage from "../page/carDetailsPage";
 
 export const router = createBrowserRouter([
   {
@@ -12,20 +14,28 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: Homepage
+        Component: Homepage,
       },
       {
-        path: "about",
-        Component: AboutPage
+        path: "addCar",
+        Component: AddCarPage,
       },
       {
-        path: "contact",
-        Component: ContactPage
+        path: "viewCar",
+        Component: ViewCarPage,
+      },
+      {
+        path: "editCar/:id",
+        Component: EditCarPage,
+      },
+      {
+        path: "carDetails/:id",
+        Component: CarDetailsPage,
       },
       {
         path: "*",
-        Component: NotFoundPage
-      }
+        Component: NotFoundPage,
+      },
     ],
   },
 ]);

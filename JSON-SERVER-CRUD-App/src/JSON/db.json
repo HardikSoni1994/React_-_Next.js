@@ -1,0 +1,566 @@
+{
+  "car": [
+    {
+      "car_brand": "Honda",
+      "car_name": "City",
+      "car_manufacturing_year": 2024,
+      "car_price": 1500000,
+      "car_fuel": "petrol",
+      "car_segment": "Sedan",
+      "car_image": "https://cdn1.smartprix.com/rx-ilwTo7neY-w420-h420/honda-city-sv-2024.webp",
+      "id": "A1b2C3d4E5f"
+    },
+    {
+      "car_brand": "Honda",
+      "car_name": "Elevate",
+      "car_manufacturing_year": 2024,
+      "car_price": 1450000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://cdn1.smartprix.com/rx-i0CU4zTwX-w1200-h1200/honda-elevate-zx-cvt.webp",
+      "id": "B2c3D4e5F6g"
+    },
+    {
+      "car_brand": "Toyota",
+      "car_name": "Fortuner",
+      "car_manufacturing_year": 2023,
+      "car_price": 4500000,
+      "car_fuel": "diesel",
+      "car_segment": "SUV",
+      "car_image": "https://cdn1.smartprix.com/rx-ij3JQd0FN-w1200-h1200/toyota-fortuner.webp",
+      "id": "C3d4E5f6G7h"
+    },
+    {
+      "car_brand": "Toyota",
+      "car_name": "Innova Crysta",
+      "car_manufacturing_year": 2024,
+      "car_price": 2500000,
+      "car_fuel": "diesel",
+      "car_segment": "MUV",
+      "car_image": "https://cdn1.smartprix.com/rx-iueIMKxHR-w1200-h1200/toyota-innova-crysta.webp",
+      "id": "D4e5F6g7H8i"
+    },
+    {
+      "car_brand": "Toyota",
+      "car_name": "Glanza",
+      "car_manufacturing_year": 2023,
+      "car_price": 950000,
+      "car_fuel": "petrol",
+      "car_segment": "Hatchback",
+      "car_image": "https://cdn1.smartprix.com/rx-iBIn0oyVM-w1200-h1200/toyota-glanza.webp",
+      "id": "E5f6G7h8I9j"
+    },
+    {
+      "car_brand": "Ford",
+      "car_name": "Endeavour",
+      "car_manufacturing_year": 2022,
+      "car_price": 3800000,
+      "car_fuel": "diesel",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/37640/endeavour-exterior-right-front-three-quarter-149471.jpeg?q=80",
+      "id": "F6g7H8i9J0k"
+    },
+    {
+      "car_brand": "Ford",
+      "car_name": "Mustang",
+      "car_manufacturing_year": 2023,
+      "car_price": 7500000,
+      "car_fuel": "petrol",
+      "car_segment": "Coupe",
+      "car_image": "https://imgd.aeplcdn.com/664x374/cw/ec/23766/Ford-Mustang-Left-Front-Three-Quarter-74324.jpg?v=201711021421&q=80",
+      "id": "G7h8I9j0K1l"
+    },
+    {
+      "car_brand": "BMW",
+      "car_name": "3 Series",
+      "car_manufacturing_year": 2024,
+      "car_price": 7200000,
+      "car_fuel": "petrol",
+      "car_segment": "Luxury",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/198567/3-series-exterior-front-view.jpeg?isig=0&q=80",
+      "id": "H8i9J0k1L2m"
+    },
+    {
+      "car_brand": "BMW",
+      "car_name": "X5",
+      "car_manufacturing_year": 2024,
+      "car_price": 9800000,
+      "car_fuel": "diesel",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/152681/x5-exterior-front-view-2.jpeg?isig=0&q=80",
+      "id": "I9j0K1l2M3n"
+    },
+    {
+      "car_brand": "BMW",
+      "car_name": "Z4",
+      "car_manufacturing_year": 2023,
+      "car_price": 9000000,
+      "car_fuel": "petrol",
+      "car_segment": "Convertible",
+      "car_image": "https://imgd.aeplcdn.com/664x374/cw/ec/37095/BMW-Z4-Roadster-Right-Front-Three-Quarter-153914.jpg?wm=0&q=80",
+      "id": "J0k1L2m3N4o"
+    },
+    {
+      "car_brand": "Mercedes-Benz",
+      "car_name": "C-Class",
+      "car_manufacturing_year": 2024,
+      "car_price": 6500000,
+      "car_fuel": "petrol",
+      "car_segment": "Luxury",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/116201/c-class-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80",
+      "id": "K1l2M3n4O5p"
+    },
+    {
+      "car_brand": "Mercedes-Benz",
+      "car_name": "G-Wagon",
+      "car_manufacturing_year": 2024,
+      "car_price": 40000000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/190739/amg-g-class-exterior-right-front-three-quarter-3.png?isig=0&q=80",
+      "id": "L2m3N4o5P6q"
+    },
+    {
+      "car_brand": "Mercedes-Benz",
+      "car_name": "AMG GT",
+      "car_manufacturing_year": 2023,
+      "car_price": 27000000,
+      "car_fuel": "petrol",
+      "car_segment": "SuperCar",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/204994/amg-gt-63-exterior-left-front-three-quarter-2.jpeg?isig=0&q=80",
+      "id": "M3n4O5p6Q7r"
+    },
+    {
+      "car_brand": "Audi",
+      "car_name": "A6",
+      "car_manufacturing_year": 2024,
+      "car_price": 6400000,
+      "car_fuel": "petrol",
+      "car_segment": "Luxury",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/39472/a6-exterior-right-front-three-quarter-3.png?isig=0&q=80",
+      "id": "N4o5P6q7R8s"
+    },
+    {
+      "car_brand": "Audi",
+      "car_name": "Q7",
+      "car_manufacturing_year": 2023,
+      "car_price": 8800000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/192279/q7-exterior-left-front-three-quarter.jpeg?isig=0&q=80",
+      "id": "O5p6Q7r8S9t"
+    },
+    {
+      "car_brand": "Audi",
+      "car_name": "RS5",
+      "car_manufacturing_year": 2024,
+      "car_price": 11000000,
+      "car_fuel": "petrol",
+      "car_segment": "Coupe",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/47073/e-tron-gt-exterior-front-view.jpeg?isig=0&q=80",
+      "id": "P6q7R8s9T0u"
+    },
+    {
+      "car_brand": "Hyundai",
+      "car_name": "Creta",
+      "car_manufacturing_year": 2024,
+      "car_price": 1800000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/41564/hyundai-creta-right-front-three-quarter9.jpeg?q=80",
+      "id": "Q7r8S9t0U1v"
+    },
+    {
+      "car_brand": "Hyundai",
+      "car_name": "i20",
+      "car_manufacturing_year": 2024,
+      "car_price": 950000,
+      "car_fuel": "petrol",
+      "car_segment": "Hatchback",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/150603/i20-exterior-right-front-three-quarter-13.png?isig=0&q=80",
+      "id": "R8s9T0u1V2w"
+    },
+    {
+      "car_brand": "Hyundai",
+      "car_name": "Verna",
+      "car_manufacturing_year": 2023,
+      "car_price": 1500000,
+      "car_fuel": "petrol",
+      "car_segment": "Sedan",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/121943/verna-exterior-right-front-three-quarter-103.png?isig=0&q=80",
+      "id": "S9t0U1v2W3x"
+    },
+    {
+      "car_brand": "Tata",
+      "car_name": "Nexon",
+      "car_manufacturing_year": 2024,
+      "car_price": 1400000,
+      "car_fuel": "electric",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/nexon-exterior-right-front-three-quarter-79.png?isig=0&q=80",
+      "id": "T0u1V2w3X4y"
+    },
+    {
+      "car_brand": "Tata",
+      "car_name": "Altroz",
+      "car_manufacturing_year": 2023,
+      "car_price": 1050000,
+      "car_fuel": "diesel",
+      "car_segment": "Hatchback",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/199863/altroz-exterior-right-front-three-quarter-13.png?isig=0&q=80",
+      "id": "U1v2W3x4Y5z"
+    },
+    {
+      "car_brand": "Tata",
+      "car_name": "Safari",
+      "car_manufacturing_year": 2024,
+      "car_price": 2400000,
+      "car_fuel": "diesel",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/138895/safari-exterior-right-front-three-quarter-40.png?isig=0&q=80",
+      "id": "V2w3X4y5Z6a"
+    },
+    {
+      "car_brand": "Mahindra",
+      "car_name": "XUV700",
+      "car_manufacturing_year": 2024,
+      "car_price": 2200000,
+      "car_fuel": "diesel",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-right-front-three-quarter.jpeg?isig=0&q=80",
+      "id": "W3x4Y5z6A7b"
+    },
+    {
+      "car_brand": "Mahindra",
+      "car_name": "Thar",
+      "car_manufacturing_year": 2024,
+      "car_price": 1800000,
+      "car_fuel": "diesel",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/204996/thar-2025-exterior-right-front-three-quarter-5.png?isig=0&q=80",
+      "id": "X4y5Z6a7B8c"
+    },
+    {
+      "car_brand": "Mahindra",
+      "car_name": "Marazzo",
+      "car_manufacturing_year": 2023,
+      "car_price": 1400000,
+      "car_fuel": "diesel",
+      "car_segment": "MUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/49114/marazzo-exterior-right-front-three-quarter-2.png?isig=0&q=80",
+      "id": "Y5z6A7b8C9d"
+    },
+    {
+      "car_brand": "Skoda",
+      "car_name": "Slavia",
+      "car_manufacturing_year": 2024,
+      "car_price": 1750000,
+      "car_fuel": "petrol",
+      "car_segment": "Sedan",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/175951/slavia-exterior-right-front-three-quarter-10.png?isig=0&q=80",
+      "id": "Z6a7B8c9D0e"
+    },
+    {
+      "car_brand": "Skoda",
+      "car_name": "Kushaq",
+      "car_manufacturing_year": 2023,
+      "car_price": 1850000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/187043/kushaq-facelift-exterior-right-front-three-quarter-6.png?isig=0&q=80",
+      "id": "A7b8C9d0E1f"
+    },
+    {
+      "car_brand": "Skoda",
+      "car_name": "Superb",
+      "car_manufacturing_year": 2024,
+      "car_price": 3600000,
+      "car_fuel": "petrol",
+      "car_segment": "Luxury",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/158937/superb-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80",
+      "id": "B8c9D0e1F2g"
+    },
+    {
+      "car_brand": "Volkswagen",
+      "car_name": "Virtus",
+      "car_manufacturing_year": 2024,
+      "car_price": 1650000,
+      "car_fuel": "petrol",
+      "car_segment": "Sedan",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/144681/virtus-exterior-right-front-three-quarter-11.png?isig=0&q=80",
+      "id": "C9d0E1f2G3h"
+    },
+    {
+      "car_brand": "Volkswagen",
+      "car_name": "Taigun",
+      "car_manufacturing_year": 2023,
+      "car_price": 1750000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/207718/taigun-facelift-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80",
+      "id": "D0e1F2g3H4i"
+    },
+    {
+      "car_brand": "Volkswagen",
+      "car_name": "Polo",
+      "car_manufacturing_year": 2022,
+      "car_price": 1000000,
+      "car_fuel": "petrol",
+      "car_segment": "Compact Hatchback",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/29628/polo-exterior-right-front-three-quarter-2.jpeg?q=80",
+      "id": "E1f2G3h4I5j"
+    },
+    {
+      "car_brand": "Nissan",
+      "car_name": "Magnite",
+      "car_manufacturing_year": 2024,
+      "car_price": 1100000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/173325/magnite-exterior-right-front-three-quarter-27.png?isig=0&q=80",
+      "id": "F2g3H4i5J6k"
+    },
+    {
+      "car_brand": "Nissan",
+      "car_name": "GT-R",
+      "car_manufacturing_year": 2023,
+      "car_price": 21200000,
+      "car_fuel": "petrol",
+      "car_segment": "SuperCar",
+      "car_image": "https://imgd.aeplcdn.com/664x374/cw/ec/20361/Nissan-GTR-Right-Front-Three-Quarter-84895.jpg?v=201711021421&q=80",
+      "id": "G3h4I5j6K7l"
+    },
+    {
+      "car_brand": "Renault",
+      "car_name": "Kiger",
+      "car_manufacturing_year": 2024,
+      "car_price": 1000000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/208550/kiger-exterior-right-front-three-quarter-30.png?isig=0&q=80",
+      "id": "H4i5J6k7L8m"
+    },
+    {
+      "car_brand": "Renault",
+      "car_name": "Kwid",
+      "car_manufacturing_year": 2023,
+      "car_price": 600000,
+      "car_fuel": "petrol",
+      "car_segment": "Compact Hatchback",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/141125/kwid-exterior-right-front-three-quarter-38.png?isig=0&q=80",
+      "id": "I5j6K7l8M9n"
+    },
+    {
+      "car_brand": "Jeep",
+      "car_name": "Compass",
+      "car_manufacturing_year": 2024,
+      "car_price": 2800000,
+      "car_fuel": "diesel",
+      "car_segment": "SUV",
+      "image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Jeep/Compass/10938/1772782142501/exterior-image-172.jpg",
+      "id": "J6k7L8m9N0o",
+      "car_image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Jeep/Compass/10938/1772782142501/exterior-image-172.jpg"
+    },
+    {
+      "car_brand": "Jeep",
+      "car_name": "Wrangler",
+      "car_manufacturing_year": 2023,
+      "car_price": 6500000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/174975/wrangler-exterior-right-front-three-quarter-34.png?isig=0&q=80",
+      "id": "K7l8M9n0O1p"
+    },
+    {
+      "car_brand": "Fiat",
+      "car_name": "Linea",
+      "car_manufacturing_year": 2022,
+      "car_price": 1100000,
+      "car_fuel": "petrol",
+      "car_segment": "Sedan",
+      "car_image": "https://imgd.aeplcdn.com/664x374/cw/ec/12624/Fiat-Linea-Right-Front-Three-Quarter-101870.jpg?v=201711021421&wm=1&q=80",
+      "id": "L8m9N0o1P2q"
+    },
+    {
+      "car_brand": "Fiat",
+      "car_name": "Punto",
+      "car_manufacturing_year": 2022,
+      "car_price": 850000,
+      "car_fuel": "diesel",
+      "car_segment": "Hatchback",
+      "car_image": "https://imgd.aeplcdn.com/664x374/cw/ec/13700/Fiat-Punto-Evo-Right-Front-Three-Quarter-77711.jpg?v=201711021421&q=80",
+      "id": "M9n0O1p2Q3r"
+    },
+    {
+      "car_brand": "Volvo",
+      "car_name": "XC90",
+      "car_manufacturing_year": 2024,
+      "car_price": 10000000,
+      "car_fuel": "hybrid",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/198257/xc90-exterior-front-view.jpeg?isig=0&q=80",
+      "id": "N0o1P2q3R4s"
+    },
+    {
+      "car_brand": "Volvo",
+      "car_name": "S90",
+      "car_manufacturing_year": 2023,
+      "car_price": 6800000,
+      "car_fuel": "hybrid",
+      "car_segment": "Luxury",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/131145/s90-exterior-front-view.jpeg?isig=0&q=80",
+      "id": "O1p2Q3r4S5t"
+    },
+    {
+      "car_brand": "Kia",
+      "car_name": "Seltos",
+      "car_manufacturing_year": 2024,
+      "car_price": 1850000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/192817/seltos-exterior-right-front-three-quarter-50.png?isig=0&q=80",
+      "id": "P2q3R4s5T6u"
+    },
+    {
+      "car_brand": "Kia",
+      "car_name": "Carens",
+      "car_manufacturing_year": 2023,
+      "car_price": 1600000,
+      "car_fuel": "diesel",
+      "car_segment": "MUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/174325/carens-exterior-right-front-three-quarter-9.png?isig=0&q=80",
+      "id": "Q3r4S5t6U7v"
+    },
+    {
+      "car_brand": "Jaguar",
+      "car_name": "F-Pace",
+      "car_manufacturing_year": 2024,
+      "car_price": 7800000,
+      "car_fuel": "diesel",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/56265/f-pace-exterior-right-front-three-quarter-5.png?isig=0&q=80",
+      "id": "R4s5T6u7V8w"
+    },
+    {
+      "car_brand": "Jaguar",
+      "car_name": "F-Type",
+      "car_manufacturing_year": 2023,
+      "car_price": 15000000,
+      "car_fuel": "petrol",
+      "car_segment": "Convertible",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/46994/f-type-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80",
+      "id": "S5t6U7v8W9x"
+    },
+    {
+      "car_brand": "Land Rover",
+      "car_name": "Defender",
+      "car_manufacturing_year": 2024,
+      "car_price": 12000000,
+      "car_fuel": "petrol",
+      "car_segment": "SUV",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/55215/defender-exterior-right-front-three-quarter-23.png?isig=0&q=80",
+      "id": "T6u7V8w9X0y"
+    },
+    {
+      "car_brand": "Land Rover",
+      "car_name": "Range Rover",
+      "car_manufacturing_year": 2024,
+      "car_price": 25000000,
+      "car_fuel": "diesel",
+      "car_segment": "Luxury",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/107719/range-rover-exterior-right-front-three-quarter-47.png?isig=0&q=80",
+      "id": "U7v8W9x0Y1z"
+    },
+    {
+      "car_brand": "Bentley",
+      "car_name": "Continental GT",
+      "car_manufacturing_year": 2024,
+      "car_price": 35000000,
+      "car_fuel": "petrol",
+      "car_segment": "Coupe",
+      "car_image": "https://imgd.aeplcdn.com/664x374/ec/d2/36/9774/img/m/Bentley-Continental-GT-Right-Front-Three-Quarter-52653_ol.jpg?v=201711021421&q=80",
+      "id": "V8w9X0y1Z2a"
+    },
+    {
+      "car_brand": "Porsche",
+      "car_name": "911",
+      "car_manufacturing_year": 2024,
+      "car_price": 20000000,
+      "car_fuel": "petrol",
+      "car_segment": "SuperCar",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/39232/911-exterior-right-front-three-quarter-154385.png?isig=0&q=80",
+      "id": "W9x0Y1z2A3b"
+    },
+    {
+      "car_brand": "McLaren",
+      "car_name": "720S",
+      "car_manufacturing_year": 2023,
+      "car_price": 45000000,
+      "car_fuel": "petrol",
+      "car_segment": "SuperCar",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/95143/720s-exterior-right-front-three-quarter-11.png?isig=0&q=80",
+      "id": "X0y1Z2a3B4c"
+    },
+    {
+      "car_brand": "Bugatti",
+      "car_name": "Chiron",
+      "car_manufacturing_year": 2024,
+      "car_price": 50000000,
+      "car_fuel": "petrol",
+      "car_segment": "SuperCar",
+      "car_image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Bugatti/Chiron/8451/1633582433934/front-view-118.jpg",
+      "id": "Y1z2A3b4C5d"
+    },
+    {
+      "car_brand": "Lamborghini",
+      "car_name": "Aventador",
+      "car_manufacturing_year": 2024,
+      "car_price": 45000000,
+      "car_fuel": "petrol",
+      "car_segment": "SuperCar",
+      "car_image": "https://motoringworld.in/wp-content/uploads/2020/09/Lamborghini-Aventador-10000th-unit-2-768x512.jpg",
+      "id": "Z2a3B4c5D6e"
+    },
+    {
+      "car_brand": "Tesla",
+      "car_name": "Model S",
+      "car_manufacturing_year": 2026,
+      "car_price": 15000000,
+      "car_fuel": "electric",
+      "car_segment": "Luxury",
+      "car_image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/93821/model-s-exterior-front-view.jpeg?q=80",
+      "id": "A3b4C5d6E7f"
+    },
+    {
+      "car_brand": "Tesla",
+      "car_name": "Model X",
+      "car_manufacturing_year": 2024,
+      "car_price": 18000000,
+      "car_fuel": "electric",
+      "car_segment": "SUV",
+      "car_image": "https://hips.hearstapps.com/hmg-prod/images/2026-tesla-model-x-185-690cc64d3dc62.jpg?crop=0.655xw:0.553xh;0.181xw,0.291xh&resize=2048:*",
+      "id": "B4c5D6e7F8g"
+    },
+    {
+      "car_brand": "Tesla",
+      "car_name": "Model 3",
+      "car_manufacturing_year": 2023,
+      "car_price": 7000000,
+      "car_fuel": "electric",
+      "car_segment": "Sedan",
+      "car_image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Tesla_Model_3_%282023%29_Autofr%C3%BChling_Ulm_IMG_9282.jpg",
+      "id": "C5d6E7f8G9h"
+    },
+    {
+      "car_brand": "Tesla",
+      "car_name": "Model Y",
+      "car_manufacturing_year": 2023,
+      "car_price": 9000000,
+      "car_fuel": "electric",
+      "car_segment": "SUV",
+      "car_image": "https://newsarenaindia.com/_next/image?url=https%3A%2F%2Fimages.newsarenaindia.com%2Ftesla-1jpg_1752571448264.jpg&w=828&q=75",
+      "id": "D6e7F8g9H0i"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
