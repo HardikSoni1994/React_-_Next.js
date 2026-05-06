@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Car, Calendar, IndianRupee, Image as ImageIcon, LayoutDashboard, Gauge, Flame, Zap, Battery } from "lucide-react";
+import { Car, Image as Gauge, Flame, Zap, Battery } from "lucide-react";
 import type { carFetchType } from "../utils/global";
 import {  useNavigate, useParams } from "react-router";
 import { fetchSingleCar, updateCar } from "../Services/CarService";
@@ -152,7 +152,7 @@ export default function EditCarPage() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Car className="h-5 w-5 text-slate-400" />
+                      
                     </div>
                     <select
                       name="car_brand"
@@ -191,7 +191,7 @@ export default function EditCarPage() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Car className="h-5 w-5 text-slate-400" />
+                      
                     </div>
                     <input
                       type="text"
@@ -213,7 +213,6 @@ export default function EditCarPage() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Calendar className="h-5 w-5 text-slate-400" />
                     </div>
                     <input
                       type="number"
@@ -233,7 +232,6 @@ export default function EditCarPage() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <IndianRupee className="h-5 w-5 text-slate-400" />
                     </div>
                     <input
                       type="number"
@@ -302,7 +300,6 @@ export default function EditCarPage() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <LayoutDashboard className="h-5 w-5 text-slate-400" />
                     </div>
                     <select
                       name="car_segment"
@@ -342,7 +339,6 @@ export default function EditCarPage() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <ImageIcon className="h-5 w-5 text-slate-400" />
                     </div>
                     <input
                       type="text"
