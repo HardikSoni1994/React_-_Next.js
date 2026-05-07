@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import type { RootState } from "./app/store"
-import { decrement, increment, reset } from "./features/counter/counterSlice";
+import { decrement, increment, reset, incrementByAmount, decrementByAmount } from "./features/counter/counterSlice";
 
 export default function App() {
   const counter = useSelector((state: RootState) => state.counterReducer.counter)
@@ -105,7 +105,7 @@ export default function App() {
               </button>
               <button 
                 onClick={() => {
-                  for(let i = 0; i < 5; i++) dispatch(increment());
+                  dispatch(incrementByAmount(5))
                 }} 
                 className="bg-indigo-50 text-indigo-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-100 transition-colors"
               >
@@ -113,7 +113,7 @@ export default function App() {
               </button>
               <button 
                 onClick={() => {
-                  for(let i = 0; i < 10; i++) dispatch(increment());
+                  dispatch(incrementByAmount(10))
                 }} 
                 className="bg-indigo-50 text-indigo-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-100 transition-colors"
               >
@@ -121,7 +121,7 @@ export default function App() {
               </button>
               <button 
                 onClick={() => {
-                  for(let i = 0; i < 5; i++) dispatch(decrement());
+                  dispatch(decrementByAmount(5))
                 }} 
                 className="bg-red-50 text-red-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-100 transition-colors"
               >
@@ -129,7 +129,7 @@ export default function App() {
               </button>
               <button 
                 onClick={() => {
-                  for(let i = 0; i < 10; i++) dispatch(decrement());
+                  dispatch(decrementByAmount(10))
                 }} 
                 className="bg-red-50 text-red-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-100 transition-colors"
               >
