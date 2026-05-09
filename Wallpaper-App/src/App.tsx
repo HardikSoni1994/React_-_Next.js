@@ -132,7 +132,7 @@ export default function App() {
                 className="w-full h-64 bg-gray-200 rounded-2xl shadow-xl relative overflow-hidden"
               >
                 {/* Yeh andar ka chamakta parda hai jo slide karega */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-shimmer"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/50 to-transparent animate-shimmer"></div>
               </div>
             ))}
           </div>
