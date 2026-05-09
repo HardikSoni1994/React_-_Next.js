@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Settings, X, LayoutGrid, Monitor, Smartphone, Square } from "lucide-react";
 
 export default function App() {
   const [wallpapers, setWallpapers] = useState([]);
@@ -8,9 +9,12 @@ export default function App() {
   const [orientation, setOrientation] = useState("");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
+  // shimmer Effect
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     
-    
+    setIsLoading(true);
     const accessKey = "tcinPYMw80VSGrY0aYEskf6f54KytzFlYhRSN5xQMp0";
     let url = `https://api.unsplash.com/search/photos?page=${page}&query=${query}&client_id=${accessKey}&per_page=20`;
 
@@ -23,9 +27,11 @@ export default function App() {
       .then((data) => {
         console.log("Data fetched Successfully", query, data);
         setWallpapers(data.results || []);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log("Error in Data Fetching", error);
+        setIsLoading(false);
       });
   }, [page, query, orientation]);
 
@@ -98,9 +104,7 @@ export default function App() {
               onClick={() => setIsFilterOpen(true)}
               className="px-4 py-2.5 bg-gray-800/90 backdrop-blur-sm text-white rounded-xl hover:bg-gray-700 transition-all flex items-center gap-2 text-sm font-medium"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-              </svg>
+            <Settings size={18} />    
               Filter
             </button>
           </div>
@@ -116,39 +120,60 @@ export default function App() {
           </h2>
         </div>
 
-        {/* Wallpaper Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
-          {wallpapers.map((wallpaper: any) => (
-            <div
-              key={wallpaper.id}
-              className="group relative overflow-hidden rounded-2xl shadow-xl bg-white transform transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
-            >
-              <div className="relative overflow-hidden h-64 w-full">
-                <img
-                  src={wallpaper.urls.regular}
-                  alt={wallpaper.alt_description}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        {/* Wallpaper Grid OR Shimmer Effect */}
+        {isLoading ? (
+          
+          // 1. Sliding Shimmer Effect
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+              <div 
+                key={index} 
+                // Parent dabba: relative aur overflow-hidden zaroori hai taaki wave bahar na nikle
+                className="w-full h-64 bg-gray-200 rounded-2xl shadow-xl relative overflow-hidden"
+              >
+                {/* Yeh andar ka chamakta parda hai jo slide karega */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-shimmer"></div>
               </div>
+            ))}
+          </div>
 
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <a
-                  href={wallpaper.urls.full}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="px-6 py-3 bg-white/95 text-indigo-700 font-semibold rounded-xl  hover:text-black  transition-all duration-300 flex items-center gap-2"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                  Download
-                </a>
+        ) : (
+
+          // 2. Tera Asli Premium Grid (Tere exact code ko yahan safe rakha hai)
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+            {wallpapers.map((wallpaper: any) => (
+              <div
+                key={wallpaper.id}
+                className="group relative overflow-hidden rounded-2xl shadow-xl bg-white transform transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
+              >
+                <div className="relative overflow-hidden h-64 w-full">
+                  <img
+                    src={wallpaper.urls.regular}
+                    alt={wallpaper.alt_description}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <a
+                    href={wallpaper.urls.full}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-6 py-3 bg-white/95 text-indigo-700 font-semibold rounded-xl  hover:text-black  transition-all duration-300 flex items-center gap-2"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+
+        )}
 
         {/* Pagination */}
         <div className="flex justify-center gap-5 mt-14">
@@ -206,7 +231,7 @@ export default function App() {
               onClick={() => setIsFilterOpen(false)}
               className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-red-50 hover:text-red-500 transition-all"
             >
-              ✕
+             <X size={24} />
             </button>
           </div>
 
@@ -214,46 +239,43 @@ export default function App() {
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Orientation</p>
             <button
               onClick={() => applyFilter("")}
-              className={`py-3 px-5 rounded-xl text-left font-medium transition-all ${
+              className={`py-3 px-5 flex flex-row items-center gap-3 rounded-xl text-left font-medium transition-all ${
                 orientation === ""
                   ? "bg-linear-to-r from-indigo-50 to-purple-50 text-indigo-700 border border-indigo-200 shadow-sm"
                   : "bg-gray-50 text-gray-600 hover:bg-gray-100"
               }`}
             >
-              All Orientations
+              <LayoutGrid size={18} /> All Orientations
             </button>
             <button
               onClick={() => applyFilter("landscape")}
-              className={`py-3 px-5 rounded-xl text-left font-medium transition-all flex items-center justify-between ${
+              className={`py-3 px-5 gap-3 rounded-xl text-left font-medium transition-all flex items-center justify-items-start ${
                 orientation === "landscape"
                   ? "bg-linear-to-r from-indigo-50 to-purple-50 text-indigo-700 border border-indigo-200 shadow-sm"
                   : "bg-gray-50 text-gray-600 hover:bg-gray-100"
               }`}
             >
-              Landscape
-              <span className="text-lg">🖥️</span>
+              <Monitor size={18} /> Landscape
             </button>
             <button
               onClick={() => applyFilter("portrait")}
-              className={`py-3 px-5 rounded-xl text-left font-medium transition-all flex items-center justify-between ${
+              className={`py-3 px-5 gap-3 rounded-xl text-left font-medium transition-all flex items-center justify-items-start ${
                 orientation === "portrait"
                   ? "bg-linear-to-r from-indigo-50 to-purple-50 text-indigo-700 border border-indigo-200 shadow-sm"
                   : "bg-gray-50 text-gray-600 hover:bg-gray-100"
               }`}
             >
-              Portrait
-              <span className="text-lg">📱</span>
+              <Smartphone size={18} /> Portrait
             </button>
             <button
               onClick={() => applyFilter("squarish")}
-              className={`py-3 px-5 rounded-xl text-left font-medium transition-all flex items-center justify-between ${
+              className={`py-3 px-5 gap-3 rounded-xl text-left font-medium transition-all flex items-center justify-items-start ${
                 orientation === "squarish"
                   ? "bg-linear-to-r from-indigo-50 to-purple-50 text-indigo-700 border border-indigo-200 shadow-sm"
                   : "bg-gray-50 text-gray-600 hover:bg-gray-100"
               }`}
             >
-              Squarish
-              <span className="text-lg">⏹️</span>
+              <Square size={18} /> Squarish
             </button>
           </div>
 
